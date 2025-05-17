@@ -7,9 +7,19 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    macros {
+        Rename: Rename {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ENTER &kp LG(C) &kp ENTER &kp RIGHT_ARROW &kp LG(A) &mkp RCLK &kp LC(LG(C)) &kp LG(V) &kp ENTER>;
+            label = "RENAME";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
